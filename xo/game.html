@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/start.css">
+    <title>Крестики-Нолики</title>
+    <script src="xogame.js"></script>
+<style>
+    @font-face {
+        font-family: BeerMoney;
+        src: url(../fonts/beer_money.ttf);
+    }
+
+    /* .tbl td   {border:1px solid #82817D;}*/
+</style>
+ </head>
+<body>
+<div>
+<div style="margin-bottom: -310px; margin-left: 540px; " >
+    <img src="field.png" width="300px" height="300px">
+</div>
+<form name=game >
+<table class="tbl" align="center"><tr>
+<td><a href="javascript:yourChoice('A')"><img src="emptySqare.png" name=A></a></td>
+<td><a href="javascript:yourChoice('B')"><img src="emptySqare.png" name=B></a></td>
+<td><a href="javascript:yourChoice('C')"><img src="emptySqare.png" name=C></a></td></tr><tr>
+<td><a href="javascript:yourChoice('D')"><img src="emptySqare.png" name=D></a></td>
+<td><a href="javascript:yourChoice('E')"><img src="emptySqare.png" name=E></a></td>
+<td><a href="javascript:yourChoice('F')"><img src="emptySqare.png" name=F></a></td></tr><tr>
+<td><a href="javascript:yourChoice('G')"><img src="emptySqare.png" name=G></a></td>
+<td><a href="javascript:yourChoice('H')"><img src="emptySqare.png" name=H></a></td>
+<td><a href="javascript:yourChoice('I')"><img src="emptySqare.png" name=I></a></td>
+</tr></table>
+<table class="tbl" align="center"><tr><td> <input type='button' value=" Новая игра " onClick="playAgain();"><br> </td>
+<td> <input type='text' size='5' name='you'><br>Вы</td><td><input type='text' size='5' name='computer'><br>Комп.</td>
+<td> <input type='text' size='5' name='ties'><br>Ничья</td></tr></table>
+
+</form>
+</div>
+</body></html>

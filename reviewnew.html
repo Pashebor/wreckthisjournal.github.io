@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=0.6"/>
+<meta charset="UTF-8">
+<title>Wreck This Journal</title>
+<link rel="stylesheet" type="text/css" media="all" href="css/load.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/hand.css">
+<link rel="shortcut icon" href="img/ks.jpeg" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/start.css">
+<link rel="stylesheet" href="css/hover.css">
+<link rel="stylesheet" href="css/review.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" type="text/css" href="css/stylepagin.css">
+<link rel="stylesheet" href="css/slicknav.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/styleNav.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/normalize.css">
+<script src="js/index.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery.slicknav.js" type="text/javascript"></script>
+<script src="js/modernizr.js"></script>
+<script type="text/javascript" src="js/jquery.quick.pagination.min.js"></script>
+<!--Удаление элементов при смене разрешения экрана-->
+<!--<script type="text/javascript">
+    window.onresize = page_resize;
+
+    function page_resize(){
+
+        if(document.body.clientWidth < 960){
+            document.getElementById("navSheet").className = 'noNe';
+            document.getElementById("stick1").className = 'noNe';
+        }else{
+            document.getElementById("navSheet").className = 'divNavBar center';
+        }
+    }
+</script>-->
+<!--Меню-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#menu').slicknav({
+            duration:500
+        });
+    });
+</script>
+<!--Страничная навигация-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("ul.pagination1").quickPagination();
+        $("ul.pagination2").quickPagination({pagerLocation:"both"});
+        $("ul.pagination3").quickPagination({pagerLocation:"both",pageSize:"3"});
+    });
+</script>
+<!--Анимация появления-->
+<script>
+    $(window).scroll(function() {
+        $('#review').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+1200) {
+                $(this).addClass("fadeIn");
+            }
+        });
+        $('#opinion').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+1350) {
+                $(this).addClass("hatch");
+            }
+        });
+        $('#area').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+1600) {
+                $(this).addClass("slideLeft");
+            }
+        });
+        $('#label1').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+1500) {
+                $(this).addClass("slideRight");
+            }
+        });
+        $('#input1').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+1500) {
+                $(this).addClass("slideLeft");
+            }
+        });
+        $('#label2').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+1500) {
+                $(this).addClass("slideRight");
+            }
+        });
+        $('#input2').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+1500) {
+                $(this).addClass("slideLeft");
+            }
+        });
+        $('#labelArea').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+1500) {
+                $(this).addClass("slideRight");
+            }
+        });
+    });
+</script>
+<!--Загрузочный экран-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.screen, .loading').fadeIn(1500);
+        $(window).load(function(){
+            $('.screen, .loading').fadeOut(1500);
+        });
+    });
+</script>
+<!--Плавный якорь-->
+<script >
+    $(document).ready(function() {
+
+        $('a[href^="#foot"]').click(function(){
+            var el = $(this).attr('href');
+            $('body').animate({
+                scrollTop: $(el).offset().top}, 1800);
+            return false;
+        });
+
+    });
+</script>
+
+
+<style>
+    input:focus{
+        outline: none;
+    }
+
+
+    @font-face {
+        font-family: Moom;
+        src: url(fonts/Moonchild_Normal.ttf);
+    }
+
+    @font-face {
+        font-family: RisBold;
+        src: url(fonts/TkachenkoSketch4F-Bold.otf);
+    }
+
+    @font-face {
+        font-family: Etude;
+        src: url(fonts/Etude.ttf);
+    }
+    @font-face {
+        font-family: Firenight;
+        src: url(fonts/Firenight-Regular.otf);
+    }
+    @font-face {
+        font-family: BeerMoney;
+        src: url(fonts/beer_money.ttf);
+    }
+
+    a{
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .screen,
+    .loading {
+        display: none;
+        position: absolute;
+        margin: auto;
+
+    }
+    .screen {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        z-index: 9997;
+        background-image: url("img/Dynamic%20Line%20Vector%20Background.jpg");
+        left:0;
+        top:0;
+    }
+    @media screen and (min-width: 960px){
+        .loading {
+            left: 35%;
+            top: 30%;
+
+            z-index: 9999;
+            padding: 10px 10px;
+
+        }
+    }
+    @media screen and (max-width: 960px){
+        .loading {
+            left: 22%;
+            top: 30%;
+
+            z-index: 9999;
+            padding: 10px 10px;
+
+        }
+    }
+
+</style>
+</head>
+<body onload="init()">
+<!--Разметка зарузочного экрана-->
+<div class="screen"></div>
+<div class="loading">
+    <div id="spinningTextG">
+        <div id="spinningTextG_1" class="spinningTextG">З</div>
+        <div id="spinningTextG_2" class="spinningTextG">А</div>
+        <div id="spinningTextG_3" class="spinningTextG">Г</div>
+        <div id="spinningTextG_4" class="spinningTextG">Р</div>
+        <div id="spinningTextG_5" class="spinningTextG">У</div>
+        <div id="spinningTextG_6" class="spinningTextG">З</div>
+        <div id="spinningTextG_7" class="spinningTextG">К</div>
+        <div id="spinningTextG_8" class="spinningTextG">А</div>
+        <div id="spinningTextG_9" class="spinningTextG">.</div>
+        <div id="spinningTextG_10" class="spinningTextG">.</div>
+        <div id="spinningTextG_11" class="spinningTextG">.</div>
+    </div>
+
+    <!--Рука-->
+    <div class="cssload-loading" style="margin-top: 60px; margin-left: -80px">
+        <div class="cssload-finger cssload-finger-1">
+            <div class="cssload-finger-item">
+                <span></span><i></i>
+            </div>
+        </div>
+        <div class="cssload-finger cssload-finger-2">
+            <div class="cssload-finger-item">
+                <span></span><i></i>
+            </div>
+        </div>
+        <div class="cssload-finger cssload-finger-3">
+            <div class="cssload-finger-item">
+                <span></span><i></i>
+            </div>
+        </div>
+        <div class="cssload-finger cssload-finger-4">
+            <div class="cssload-finger-item">
+                <span></span><i></i>
+            </div>
+        </div>
+        <div class="cssload-last-finger">
+            <div class="cssload-last-finger-item"><i></i></div>
+        </div>
+    </div>
+</div>
+<!--Параллакс бэкграунд и панель навигации-->
+<div class="b-page b-page_holiday-face b-page_holiday-bg_2" >
+    <div data-id="1" class="holiday-face holiday-face_parallax">
+        <div data-offset="50" class="holiday-face__item holiday-face__item_3"></div>
+
+        <!--Меню-->
+        <div class="container">
+            <div class="row">
+                <div class="divNavBar center" id = "navSheet">
+
+
+                    <div class="one column" ><img  class="bigEntrance tossing imaga" src="img/arrowpointer.png" id = "imaga"></div>
+
+
+                    <div class="eleven columns">
+                        <ul id="menu" class="inArrow">
+                            <li><a href="index.php" class=" hvr-wobble-horizontal " style="font-family: Firenight; font-size: 20pt; color: #000000; ">О Блокноте</a></li>
+
+                            <li><a href="order.php" class="hvr-wobble-to-bottom-right " style="font-family: Firenight; font-size: 20pt; color: #000000; ">Заказать</a></li>
+
+                            <li><a href="reviews.php" class="hvr-buzz tossing" style="font-family: Firenight; font-size: 20pt; color: #000000; ">Отзывы</a></li>
+
+                            <li><a href="partners.php" class="hvr-wobble-to-top-right" style="font-family: Firenight; font-size: 20pt; color: #000000; ">Партнерам</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row" id = "arrowAndBrand">
+                <div class="six columns"><a href="#foot" ><img src="img/arrowDown.png" width="260px" height="320px" class="arrowRotate bigEntrance" title="Комментарий"></a></div>
+                <div class="six columns"><img src="img/wtj.png" width="270px" height="270px" class="logoRotate slideLeft"></div>
+
+            </div>
+            <div class="row">
+                <img src="img/ks.jpeg" id="brandBook" width="300px" height="400px" class="bookRotate slideLeft ">
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!--Выезжающий лист-->
+    <script>
+        var  myFlag = true;
+
+        $(document).ready(function(){
+            $('#slideSheet').click(function(){
+
+                if(myFlag){
+
+                    $(this).removeClass('squareSheet');
+                    $(this).addClass('click');
+                    myFlag = false;
+
+                }else{
+                    $(this).removeClass('click');
+                    $(this).addClass('squareSheet');
+                    myFlag = true;
+                }
+            });
+
+        });
+    </script>
+
+    <div id="slideSheet"  class="squareSheet ">
+        <table   style="margin-left: 10%; margin-top: 40px; width: 335px; border-spacing: 0px 0px 0px 0px" >
+            <tr>
+                <td><img src="img/phoneIcon.png" width="34px"></td>
+                <td><p class="p18BeerMoney" style="margin-left: -40px">КОНТАКТЫ</p></td>
+            </tr>
+            <tr >
+                <td ><p class="p15BeerMoney" style="margin-top: -5px">Борис:</p></td>
+                <td><a href="tel:8-953-732-38-09"><p class="p15BeerMoney zoomPhoneNumber" style="margin-left: -32px; margin-top: -5px">8 953 732 38 09</p></a></td>
+            <tr>
+                <td><p class="p15BeerMoney" style="margin-top: -16px">@email:</p></td>
+                <td><a href="http://mail.ru" ><p class="p15BeerMoney zoomPhoneNumber" style="margin-left: -32px; margin-top: -16px">wreckthisjournal@mail.ru</p></a></td>
+            </tr>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="divBreakSheet">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns" style="margin-top: 140px">
+                <div  align = "center" id="review">
+                    <p class="headerReview floating">Пожелания и вопросы</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+   <div class="contentAnswer"  >
+            <div class="container">
+                <div id="page-wrap" align="center">
+
+                    <div id="content">
+
+                        <!-- plugin html -->
+
+
+
+                        <ul class="pagination2" >
+                            <?php
+                          include("connectToDb.php");
+
+                            $queryClients = mysql_query("select * from questions group by id desc")
+                            or die(mysql_error());
+
+                              while ($dataClients = mysql_fetch_array($queryClients)){
+                                if($dataClients['answered'] == true && $dataClients['answer'] != null){
+                                  echo("
+                                   <li><p class='reviewField' style='margin-top: 50px'>
+                            <b>$dataClients[name]</b><br>
+                            $dataClients[question]<br>
+                            <b>Администратор</b><br>
+                            $dataClients[answer]</p></li>
+                            ");
+                            }
+
+                            if($dataClients['answer'] == null && $dataClients['answered'] == true){
+                            echo("
+                            <li><p class='reviewField' style='margin-top: 50px'>
+                                <b>$dataClients[name]</b><br>
+                                $dataClients[question]</p></li><br>
+                            ");
+
+                            }
+                            }
+
+                            ?>
+                            <li><p class="reviewField" style="margin-top: 50px" >
+                                <b>Лаура Алкеновна</b>
+                                подскажите есть доставка в Казахстан<br>
+                                <b>Администратор</b>
+                                Здравствуйте, Лаура Алкеновна! Да, в Казахстан заказы отправляем.</p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Анна Владимировна</b>
+                                Я очень рада, что когда - то вас нашла. Работать с вами - одно удовольствие!
+                            </p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Анастасия Владимировна</b>
+                                Здравствуйте! Очень нравится ваш сайт и ваша продукция. Радует, что ассортимент постоянно расширяется.
+                                Оперативная обработка заказов, внимательный и вежливый персонал. В общем, все на самом высоком уровне.
+                                Единственное пожелание: укажите, пожалуйста, в описании лент их цвет.
+                                Очень неудобно делать заказ, так как фото не всегда верно передает цвета.
+                                <b>Администратор</b>
+                                Здравствуйте, Анастасия Владимировна! Большое спасибо за отзыв и за высокую оценку нашей работы. Ваше пожелание обязательно учтем и в ближайшее время укажем цвета лент.
+                            </p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Мария Сергеевна</b>
+                                Здравствуйте! Хотелось бы у вас заказать гофру однотонную не металлизированную но разных оттенков (качеством как 7247)!
+                                Будет ли разнообразие на данный вид товара и бывает ли у вас лента аспидистра?
+                                <b>Администратор</b>
+                                Здравствуйте, Мария Сергеевна! Однотонная гофрированная бумага разных оттенков на сайте будет представлена в течении недели.
+                                Ленты "Аспидистра" в нашем интернет-магазине не было.
+                                Мы расширяем ассортимент флористических товаров, и возможно в будущем такая лента тоже будет в продаже.
+                            </p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Лаура Алкеновна</b>
+                                подскажите есть доставка в Казахстан<br>
+                                <b>Администратор</b>
+                                Здравствуйте, Лаура Алкеновна! Да, в Казахстан заказы отправляем.</p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Анна Владимировна</b>
+                                Я очень рада, что когда - то вас нашла. Работать с вами - одно удовольствие!
+                            </p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Анастасия Владимировна</b>
+                                Здравствуйте! Очень нравится ваш сайт и ваша продукция. Радует, что ассортимент постоянно расширяется.
+                                Оперативная обработка заказов, внимательный и вежливый персонал. В общем, все на самом высоком уровне.
+                                Единственное пожелание: укажите, пожалуйста, в описании лент их цвет.
+                                Очень неудобно делать заказ, так как фото не всегда верно передает цвета.
+                                <b>Администратор</b>
+                                Здравствуйте, Анастасия Владимировна! Большое спасибо за отзыв и за высокую оценку нашей работы. Ваше пожелание обязательно учтем и в ближайшее время укажем цвета лент.
+                            </p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Мария Сергеевна</b>
+                                Здравствуйте! Хотелось бы у вас заказать гофру однотонную не металлизированную но разных оттенков (качеством как 7247)!
+                                Будет ли разнообразие на данный вид товара и бывает ли у вас лента аспидистра?
+                                <b>Администратор</b>
+                                Здравствуйте, Мария Сергеевна! Однотонная гофрированная бумага разных оттенков на сайте будет представлена в течении недели.
+                                Ленты "Аспидистра" в нашем интернет-магазине не было.
+                                Мы расширяем ассортимент флористических товаров, и возможно в будущем такая лента тоже будет в продаже.
+                            </p></li> <li><p class="reviewField" style="margin-top: 50px">
+                            <b>Лаура Алкеновна</b>
+                            подскажите есть доставка в Казахстан<br>
+                            <b>Администратор</b>
+                            Здравствуйте, Лаура Алкеновна! Да, в Казахстан заказы отправляем.</p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Анна Владимировна</b>
+                                Я очень рада, что когда - то вас нашла. Работать с вами - одно удовольствие!
+                            </p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Анастасия Владимировна</b>
+                                Здравствуйте! Очень нравится ваш сайт и ваша продукция. Радует, что ассортимент постоянно расширяется.
+                                Оперативная обработка заказов, внимательный и вежливый персонал. В общем, все на самом высоком уровне.
+                                Единственное пожелание: укажите, пожалуйста, в описании лент их цвет.
+                                Очень неудобно делать заказ, так как фото не всегда верно передает цвета.
+                                <b>Администратор</b>
+                                Здравствуйте, Анастасия Владимировна! Большое спасибо за отзыв и за высокую оценку нашей работы. Ваше пожелание обязательно учтем и в ближайшее время укажем цвета лент.
+                            </p></li>
+                            <li><p class="reviewField" style="margin-top: 50px">
+                                <b>Мария Сергеевна</b>
+                                Здравствуйте! Хотелось бы у вас заказать гофру однотонную не металлизированную но разных оттенков (качеством как 7247)!
+                                Будет ли разнообразие на данный вид товара и бывает ли у вас лента аспидистра?
+                                <b>Администратор</b>
+                                Здравствуйте, Мария Сергеевна! Однотонная гофрированная бумага разных оттенков на сайте будет представлена в течении недели.
+                                Ленты "Аспидистра" в нашем интернет-магазине не было.
+                                Мы расширяем ассортимент флористических товаров, и возможно в будущем такая лента тоже будет в продаже.
+                            </p></li>
+                        </ul>
+
+                        <div class="clearing"></div>
+
+                        <!-- end plugin html -->
+
+
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                </div >
+
+            </div>
+
+       <div class="contentQuestion" >
+           <div class="container">
+               <div class="row" id="opinion">
+                    <div class="twelve columns" style="text-align: center" id="foot"><p class="headerReview tossing" style="color: #000000">Оставь свое мнение</p></div>
+               </div>
+               <div class="row" style="margin-top: 5%">
+                 <div class="twelve columns">
+                    <form  align="center" method="post" action="questionContoller.php" enctype="multipart/form-data">
+                        <label class="p15BeerMoney" >Напиши свое имя<span style="color: #DA4040">*</span></label><br>
+                        <input id="input1" type="text" name="name" style="border: 0px;border-bottom: 2px solid #000000; background: none; width: 50%; font-family: BeerMoney; font-size: 15pt " ><br><br>
+                        <label class="p15BeerMoney" >Напиши свой e-mail<span style="color: #DA4040">*</span></label><br>
+                        <input id="input2" type="email" name="email" style="border: 0px;border-bottom: 2px solid #000000; background: none; width: 50%; font-family: BeerMoney; font-size: 15pt " ><br><br>
+                        <label class="p15BeerMoney" >Комментарий</label><br><br>
+                        <textarea name="comment"  class="commentArea u-full-width" style="outline: none" id="area"  ></textarea><br><br>
+                        <input type="submit" name="send" value="Отправить" class="btnSubmit" />
+
+                    </form>
+                 </div>
+               </div>
+             <br>
+             <br>
+             <br>
+           </div>
+
+           <div class="foot" style="margin-top: -5px">
+               <div class="container" style="margin-top: 10px">
+                   <!--Футер-->
+
+
+                   <table class="row u-max-full-width" style="margin: auto">
+
+                       <tr>
+                           <td ><a href="http://vk.com/wreckthisjournal_ru"><img src="img/VKIcon.png" width="64px" class="rounding "></a></td>
+                           <td ><a href="https://instagram.com/wreckthisjournal.ru/"><img src="img/inst.png" width="64px" class="rounding "></a></td>
+                           <td ><a><img src="img/FB.png" width="64px" class="rounding "></a></td>
+                           <td ><a><img src="img/Odnoklasniki.png" width="64px" class="rounding "></a></td>
+                           <td ><a><img src="img/youtube.png" width="64px" class="rounding "></a></td>
+                           <td id="pasheborsLaba"><a href="http://vk.com/id272532517"><img src="img/pasheborsLaba.png" width="120px"   style="padding-left: 60%"></a></td>
+                       </tr>
+                       <tr>
+                           <td id = "pasheborsLaba2" colspan="5" ><a href="http://vk.com/id272532517"><img src="img/pasheborsLaba.png" width="120px" style="margin-left: 30%"></a></td>
+                       </tr>
+                   </table>
+
+                   <br>
+                   <br>
+
+               </div>
+           </div>
+       </div>
+
+
+   </div>
+
+</div>
+</body>
+</html>

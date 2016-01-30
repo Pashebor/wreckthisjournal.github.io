@@ -1,0 +1,139 @@
+.buttonNewGame{
+    background: url("../img/buttonNewgame.png") no-repeat;
+    text-align: center;
+    width:150px;
+    height: 70px;
+    border: none;
+    font-family: BeerMoney;
+    font-size: 17pt;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    -moz-transition: all  0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in;
+}
+.buttonNewGame:hover{
+    -webkit-transform:scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform:scela(1.02);
+}
+
+.underline{
+    background: url("../img/underline.png") no-repeat;
+    text-align: center;
+    width:150px;
+    height: 70px;
+    border: none;
+    font-family: BeerMoney;
+    font-size: 25pt;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+}
+.underline2{
+    background: url("../img/underline.png") no-repeat;
+    text-align: center;
+    width:150px;
+    height: 70px;
+    border: none;
+    font-family: BeerMoney;
+    font-size: 25pt;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+}
+.headerOrders{
+    font-family: Firenight;
+    font-size: 23pt;
+    color: #DA4040;
+}
+#intro{
+    visibility: hidden;
+}
+#clickin{
+    visibility: hidden;
+}
+#field{
+    visibility: hidden;
+}
+#score1{
+    visibility: hidden;
+}
+#score2{
+    visibility: hidden;
+}
+#orders{
+    visibility: hidden;
+}
+#mailUp{
+    visibility: hidden;
+}
+#attent{
+    visibility: hidden;
+}
+#important{
+    visibility: hidden;
+}
+#formOrder{
+    visibility: hidden;
+}
+#deliveryByCar{
+    visibility: hidden;
+}
+#deliveryByVk{
+    visibility: hidden;
+}
+.pAttention{
+
+    font-family: Firenight;
+    font-size: 30pt;
+    color: #DA4040;
+    margin-top: 10px;
+}
+.delivery{
+    -moz-transition: all  0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in;
+}
+.delivery:hover{
+    -webkit-transform:scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform:scela(1.02);
+}
+.deliveryCar{
+    -moz-transition: all  0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in;
+}
+.deliveryCar:hover{
+    -webkit-transform:translate(-20px, 0px);
+    -moz-transform: translate(-20px, 0px);
+    -o-transform:translate(-20px, 0px);
+    opacity: 0;
+}
+
+@media screen and (min-width: 960px){
+    .tableRes2{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 959px){
+    .tableRes1{
+        display: none;
+    }
+}
+@media screen and (min-width: 960px){
+    #orderTable{
+        margin: 10% 15% auto;
+        border-spacing: 0px
+    }
+}
+
+@media screen and (max-width: 959px){
+    #orderTable{
+        margin: 10% 0% auto;
+        border-spacing: 0px
+    }
+}

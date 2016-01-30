@@ -1,0 +1,63 @@
+.b-page_holiday-face .holiday-face_parallax {
+    background-color: white;
+    transform: translate3d(0px, 0px, 0px);
+}
+.holiday-face {
+
+    bottom: 0;
+    left: 0;
+    min-height: 540px;
+    min-width: 875px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+
+.holiday-face_parallax .holiday-face__item_4 {
+    background-image: url("../img/partners.jpg");
+}
+.holiday-face_parallax .holiday-face__item_3 {
+    background-image: url("../img/01.jpg");
+}
+.holiday-face_parallax .holiday-face__item_2 {
+    background-image: url("../img/review.jpg");
+}
+.holiday-face_parallax .holiday-face__item_1 {
+    background-image: url("../img/clouds.jpg");
+}
+
+.holiday-face-words__link {
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+   
+}
+.holiday-face-words {
+    background: none no-repeat scroll center top rgba(0, 0, 0, 0);
+    height: 69px;
+    left: -30px;
+    position: absolute;
+    right: -30px;
+    top: 20%;
+	width:100%;
+}
+.b-page_holiday-face .holiday-face_parallax .holiday-face__item {
+    opacity: 1;
+}
+.holiday-face__item {
+    background-position: top ;
+    background-repeat: repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    margin: -50px 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.1s ease 0s;
+}

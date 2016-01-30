@@ -1,0 +1,35 @@
+1. В имеющемся MySQL создайте базу данных под именем wtj;
+2. Далее в созданную базу данных и выполните следующие 3 запроса:
+
+
+ 1)   create table statements(
+      id serial not null auto_increment,
+      name varchar (60),
+      email varchar (60),
+      phone int,
+      answered boolean,
+      primary key (id))
+      engine InnoDB DEFAULT CHARACTER SET utf8;
+
+2)    create table orders(
+      id serial not null auto_increment,
+      name varchar (60),
+      email varchar (60),
+      city varchar (120),
+      phone int,
+      answered boolean,
+      primary key (id))
+      engine InnoDB DEFAULT CHARACTER SET utf8;
+
+
+3)    create table questions(
+      id serial not null auto_increment,
+      name varchar (60),
+      email varchar (60),
+      question text,
+      answer text,
+      answered boolean,
+      primary key (id))
+      engine InnoDB DEFAULT CHARACTER SET utf8;
+
+3. После откройте файл connectToDb.php и установите в нем имя имя вашего хостинга, ваш root-login, пароль, и имя базы данных.

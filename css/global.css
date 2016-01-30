@@ -1,0 +1,249 @@
+/*
+	Resets defualt browser settings
+	reset.css
+*/
+
+
+#container {
+	width:370px;
+	padding:10px;
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+    -webkit-transform:rotate(5deg);
+    -moz-transform: rotate(5deg) ;
+    -o-transform:rotate(5deg);
+}
+#container1 {
+    width:370px;
+    padding:10px;
+    margin:0 auto;
+    position:relative;
+    z-index:0;
+    -webkit-transform:rotate(-5deg);
+    -moz-transform: rotate(-5deg) ;
+    -o-transform:rotate(-5deg);
+}
+#container2 {
+    width:370px;
+    padding:10px;
+    margin:0 auto;
+    position:relative;
+    z-index:0;
+    -webkit-transform:rotate(5deg);
+    -moz-transform: rotate(5deg) ;
+    -o-transform:rotate(5deg);
+}
+
+
+#example {
+	width:370px;
+	height:250px;
+	position:relative;
+}
+
+#example1 {
+    width:370px;
+    height:250px;
+    position:relative;
+}
+#example2 {
+    width:370px;
+    height:250px;
+    position:relative;
+}
+
+#ribbon {
+	position:absolute;
+	top:-3px;
+	left:-15px;
+	z-index:500;
+}
+#ribbon1 {
+    position:absolute;
+    top:-3px;
+    left:-15px;
+    z-index:500;
+}
+#ribbon2 {
+    position:absolute;
+    top:-3px;
+    left:-15px;
+    z-index:500;
+}
+
+#frame {
+	position:absolute;
+	z-index:0;
+	width:453px;
+	height:283px;
+    top: 13px;
+	left:-37px;
+}
+#frame1 {
+    position:absolute;
+    z-index:0;
+    width:453px;
+    height:283px;
+    top: 13px;
+    left:-37px;
+}
+#frame2 {
+    position:absolute;
+    z-index:0;
+    width:453px;
+    height:283px;
+    top: 13px;
+    left:-37px;
+}
+
+#slides {
+	position:absolute;
+	top:15px;
+	left:4px;
+	z-index:100;
+}
+#slides1 {
+    position:absolute;
+    top:15px;
+    left:4px;
+    z-index:100;
+}
+#slides2 {
+    position:absolute;
+    top:15px;
+    left:4px;
+    z-index:100;
+}
+
+#slides .next,#slides .prev {
+	position:absolute;
+	top:90px;
+	left:-75px;
+	width:50px;
+	height:50px;
+	display:block;
+	z-index:101;
+}
+
+#slides1 .next1,#slides1 .prev1 {
+    position:absolute;
+    top:90px;
+    left:-75px;
+    width:50px;
+    height:50px;
+    display:block;
+    z-index:101;
+}
+
+#slides2 .next2,#slides2 .prev2 {
+    position:absolute;
+    top:90px;
+    left:-75px;
+    width:50px;
+    height:50px;
+    display:block;
+    z-index:101;
+}
+
+.slides_container {
+	width:370px;
+	height:250px;
+	overflow:hidden;
+	position:relative;
+}
+.slides_container1 {
+    width:370px;
+    height:250px;
+    overflow:hidden;
+    position:relative;
+}
+.slides_container2 {
+    width:370px;
+    height:250px;
+    overflow:hidden;
+    position:relative;
+}
+
+#slides .next {
+	left:345px;
+}
+
+#slides1 .next1 {
+    left:345px;
+}
+#slides2 .next2 {
+    left:345px;
+}
+
+.pagination {
+	margin:26px auto 0;
+	width:100px;
+}
+.pagination1 {
+    margin:26px auto 0;
+    width:100px;
+}
+.pagination2 {
+    margin:26px auto 0;
+    width:100px;
+}
+.pagination li {
+	float:left;
+	margin:0 1px;
+}
+.pagination1 li {
+    float:left;
+    margin:0 1px;
+}
+.pagination2 li {
+    float:left;
+    margin:0 1px;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../img/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination1 li a {
+    display:block;
+    width:12px;
+    height:0;
+    padding-top:12px;
+    background-image:url(../img/pagination.png);
+    background-position:0 0;
+    float:left;
+    overflow:hidden;
+}
+.pagination2 li a {
+    display:block;
+    width:12px;
+    height:0;
+    padding-top:12px;
+    background-image:url(../img/pagination.png);
+    background-position:0 0;
+    float:left;
+    overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}
+
+.pagination1 li.current1 a {
+    background-position:0 -12px;
+}
+.pagination2 li.current2 a {
+    background-position:0 -12px;
+}
+
+
+
+
